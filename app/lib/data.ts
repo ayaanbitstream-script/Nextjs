@@ -32,12 +32,12 @@ const partnersData = {
   sectionTitle: "Our Proven Partnerships",
   sectionSubtitle: "Successful Collaborations With the Industry's Best",
   partners: [
-    { name: "Reliance", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Reliance_Industries_Logo.svg/2560px-Reliance_Industries_Logo.svg.png" },
-    { name: "HCL",      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/HCL_Technologies_logo.svg/2560px-HCL_Technologies_logo.svg.png" },
-    { name: "IBM",      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" },
-    { name: "CRIF",     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Crif_logo.svg/1200px-Crif_logo.svg.png" },
-    { name: "ADP",      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/ADP_logo.svg/2560px-ADP_logo.svg.png" },
-    { name: "Bayer",    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bayer_logo.svg/1200px-Bayer_logo.svg.png" },
+    { name: "Reliance", logo: "rel.png" },
+    { name: "HCL",      logo: "hcl.png" },
+    { name: "IBM",      logo: "ibm.png" },
+    { name: "CRIF",     logo: "crif.png" },
+    { name: "ADP",      logo: "adp.png" },
+    { name: "Bayer",    logo: "bayer.png" },
   ],
 };
 

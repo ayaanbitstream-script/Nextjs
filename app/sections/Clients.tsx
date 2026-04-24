@@ -25,7 +25,7 @@ export default function ClientsSection({ data }: { data: PartnersData }) {
               <div key={p.name}
                 className="flex items-center justify-center p-4 rounded-2xl glass glass-hover transition-all duration-300 group">
                 <img src={p.logo} alt={p.name}
-                  className="h-7 w-auto object-contain grayscale invert opacity-30 group-hover:opacity-70 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-300" />
+                  className="h-7 w-auto object-contain" />
               </div>
             ))}
           </div>

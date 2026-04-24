@@ -23,8 +23,8 @@ export default function SkillEnhancementSection({ data }: { data: SkillEnhanceme
               {data.sectionTitle}
             </h2>
             {/* Placeholder circle */}
-            <div className="hidden lg:flex w-52 h-52 mx-auto bg-blue-500/30 rounded-full border-2 border-blue-400/30 items-center justify-center text-blue-200 text-sm italic">
-              [Professional Image]
+            <div className="hidden lg:flex mx-auto  items-center justify-center text-blue-200 text-sm italic">
+              <img src="image.png" alt="" />
             </div>
           </div>
 
