@@ -1,6 +1,10 @@
+"use client";
 import { HeroData } from "../types";
+import { useModal } from "../components/ModalProvider"; // Ensure path is correct
 
 export default function HomeSection({ data }: { data: HeroData }) {
+  const { openModal } = useModal();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#09090b]">
 
@@ -16,7 +20,7 @@ export default function HomeSection({ data }: { data: HeroData }) {
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* LEFT */}
-          <div className="space-y-8 fade-up">
+          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 text-xs font-semibold uppercase tracking-widest">
               <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
@@ -50,12 +54,17 @@ export default function HomeSection({ data }: { data: HeroData }) {
 
             {/* CTA */}
             <div className="flex items-center gap-4 flex-wrap">
-              <button className="group flex items-center gap-2.5 bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] active:scale-95">
+              {/* TRIGGER BUTTON */}
+              <button 
+                onClick={openModal}
+                className="group flex items-center gap-2.5 bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] active:scale-95"
+              >
                 {data.cta}
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
               </button>
+
               <button className="text-zinc-400 hover:text-white text-sm font-semibold flex items-center gap-2 transition-colors">
                 <span className="w-8 h-8 rounded-full glass flex items-center justify-center">▶</span>
                 Watch Overview
@@ -64,7 +73,7 @@ export default function HomeSection({ data }: { data: HeroData }) {
           </div>
 
           {/* RIGHT */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end animate-in fade-in zoom-in duration-1000">
             {/* Rotating ring */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-[520px] h-[520px] rounded-full border border-violet-500/10 animate-[spin_30s_linear_infinite]" />

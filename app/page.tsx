@@ -11,8 +11,7 @@ import HiwSection from "./sections/HiW";
 import FaqSection from "./sections/Faqs";
 import TestimonialSection from "./sections/Testimonial";
 
-// No async fetch needed — data is imported directly at build time.
-// The /api/data route still exists for any client-side or external consumers.
+// Removed useState import to keep this as a clean Server Component
 export default function Page() {
   return (
     <>

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useModal } from "./ModalProvider"; // Import the hook
 
 const NAV_LINKS = [
   { name: "Home",        href: "#home" },
@@ -17,6 +18,7 @@ export default function Header() {
   const [scrolled, setScrolled]     = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeId, setActiveId]     = useState("home");
+  const { openModal } = useModal(); // Initialize the modal trigger
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -74,10 +76,13 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#faqs" onClick={(e) => go(e, "#faqs")}
+          {/* Trigger Button Desktop */}
+          <button 
+            onClick={openModal}
             className="hidden sm:flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-4 py-2 rounded-full transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] active:scale-95">
             Enquire Now
-          </a>
+          </button>
+          
           <button className="lg:hidden p-2 text-zinc-400 hover:text-white transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +95,7 @@ export default function Header() {
       </div>
 
       {/* Mobile drawer */}
-      <div className={`lg:hidden transition-all duration-300 overflow-hidden ${mobileOpen ? "max-h-[480px]" : "max-h-0"}`}>
+      <div className={`lg:hidden transition-all duration-300 overflow-hidden ${mobileOpen ? "max-h-[520px]" : "max-h-0"}`}>
         <div className="bg-[#09090b]/95 backdrop-blur-xl border-t border-white/5 px-4 py-4 flex flex-col gap-1">
           {NAV_LINKS.map((link) => (
             <a key={link.name} href={link.href} onClick={(e) => go(e, link.href)}
@@ -100,10 +105,12 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <a href="#faqs" onClick={(e) => go(e, "#faqs")}
-            className="mt-2 bg-violet-600 text-white text-sm font-semibold py-3 rounded-xl text-center">
+          {/* Trigger Button Mobile */}
+          <button 
+            onClick={() => { openModal(); setMobileOpen(false); }}
+            className="mt-2 bg-violet-600 text-white text-sm font-semibold py-3 rounded-xl text-center shadow-lg active:scale-95">
             Enquire Now
-          </a>
+          </button>
         </div>
       </div>
     </header>
