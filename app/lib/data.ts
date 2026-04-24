@@ -142,9 +142,9 @@ const testimonialsData = {
   sectionTitle: "Testimonials from Our Partners",
   sectionSubtitle: "What Our Clients Are Saying",
   testimonials: [
-    { logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/ADP_logo.svg/2560px-ADP_logo.svg.png",   quote: "We would like to thank Accredian for the wonderful support and the beautiful journey. The team turned our vision into reality with unparalleled dedication, service, and expertise throughout the entire process." },
-    { logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bayer_logo.svg/1200px-Bayer_logo.svg.png", quote: "Accredian's commitment to excellence is unmatched. They consistently go the extra mile to ensure our needs are met and exceeded, providing reliable support and high-quality service every step of the way." },
-    { logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png",    quote: "The strategic framework provided by Accredian has been instrumental in our team's digital transformation. Their industry insights and hands-on approach make them a top-tier training partner." },
+    { logo: "adp.png",   quote: "We would like to thank Accredian for the wonderful support and the beautiful journey. The team turned our vision into reality with unparalleled dedication, service, and expertise throughout the entire process." },
+    { logo: "bayer.png", quote: "Accredian's commitment to excellence is unmatched. They consistently go the extra mile to ensure our needs are met and exceeded, providing reliable support and high-quality service every step of the way." },
+    { logo: "ibm.png",    quote: "The strategic framework provided by Accredian has been instrumental in our team's digital transformation. Their industry insights and hands-on approach make them a top-tier training partner." },
   ],
   ctaBanner: {
     title: "Want to Learn More About Our Training Solutions?",
